@@ -1,5 +1,7 @@
 package challenge.hiddenfounders.com.hiddenfounderschallenge.utils;
 
+import android.util.Log;
+
 import com.google.gson.Gson;
 
 import java.util.Collection;
@@ -13,6 +15,7 @@ import java.util.Map;
 public class JsonUtils {
 
     private static final Gson gson = new Gson();
+    private static final String TAG = "JsonUtils";
 
     public static Map<String, Object> parse(String data) {
         return gson.fromJson(data, Map.class);
@@ -39,7 +42,7 @@ public class JsonUtils {
                         Map bean = (Map) map.get(part);
                         map = bean;
                     } else {
-                        //throw new Exception("key " + part + " from Path: " + path + " must be a Map ...");
+                        Log.e(TAG, "key " + part + " from Path: " + path + " must be a Map ...");
                     }
                 } else {
                     return null;

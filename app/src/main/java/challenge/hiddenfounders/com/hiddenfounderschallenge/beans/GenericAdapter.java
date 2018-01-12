@@ -31,7 +31,7 @@ public class GenericAdapter extends BaseAdapter {
 
     @Override
     public long getItemId(int i) {
-        return items.get(i).getId();
+        return 0L;
     }
 
     @Override
@@ -39,8 +39,6 @@ public class GenericAdapter extends BaseAdapter {
         return items.get(i);
     }
 
-    //Now, using polymorphism, it should return a correctly built
-    //view for whatever object type you've passed in.
     @Override
     public View getView(int pos, View convertView, ViewGroup parent) {
         return items.get(pos).buildView(convertView, inflater);

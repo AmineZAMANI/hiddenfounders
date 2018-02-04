@@ -5,7 +5,11 @@ package challenge.hiddenfounders.com.hiddenfounderschallenge.beans;
  */
 
 public interface Callback {
-    public static final String KEY_ITEMS = "items";
-    public static final String SEARCH_URI = "https://api.github.com/search/repositories?q=created:%3E2017-10-22&sort=stars&order=desc";
+    String KEY_ITEMS = "items";
+    String SEARCH_ENDPOINT = "https://api.github.com/search/repositories?q=created:%3E2017-10-22&sort=stars&order=desc&page=$page";
+
+    void onPreProcess();
+
+    void onError(int messageID);
     void onResult(String result);
 }

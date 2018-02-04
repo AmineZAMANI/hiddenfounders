@@ -32,7 +32,7 @@ public class JsonUtils {
         if (split.length == 1) {
             return hasPathList && path.contains("[") ? traverseList(map, path) : map.get(path);
         } else {
-            String part = null;
+            String part;
             for (int i = 0; i < split.length - 1; i++) {
                 part = split[i];
                 if (hasPathList && part.contains("[")) {
@@ -60,7 +60,7 @@ public class JsonUtils {
 
     private static Map traverseList(Map map, String part) {
         Map bean = null;
-        String path = part.replaceAll("\\[.*\\]", "");
+        String path = part.replaceAll("[.*]", "");
         if (map != null && findByPath(map, path) instanceof Collection<?>) {
             List<Map> listBeans = (List<Map>) JsonUtils.findByPath(map, path);
             String lstIdx = part.substring(part.indexOf("[") + 1, part.indexOf("]"));

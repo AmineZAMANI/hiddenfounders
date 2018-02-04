@@ -1,3 +1,11 @@
 <resources>
-    <string name="app_name">HiddenFoundersChallenge</string>
+    <string name="app_name">Trending Repos</string>
+    <string name="loading_data_problem_occurs">a problem occurs while loading data, please try again</string>
+    <string name="loading_more_elements">&#xf017; Loding more items...</string>
+    <string name="try_again">&#xf0a6; Try again !</string>
+    <string name="please_wait">&#xf017; Please wait</string>
+    <string name="fa_clock_o">&#xf017;</string>
+    <string name="fa_star">&#xf005;</string>
+    <string name="fa_star_o">&#xf006;</string>
+
 </resources>

@@ -30,6 +30,7 @@ public class MainActivity extends AppCompatActivity implements Callback {
 
 
     /*
+
     PAGES_THRESHOLD to specify the max of loaded pages.
      */
     private final int PAGES_THRESHOLD = 1000;
